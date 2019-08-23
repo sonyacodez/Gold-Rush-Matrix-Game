@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GoldRush Matrix Game</title>
+    <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h5 class="center-align">Gimme the Gold!</h5>
+
+    <script id="matrix-template" type="text/x-handlebars-template">
+        {{#each matrix}}
+            <div class="row">
+                {{#each this}}
+                    <div class="col m2 green darken-4 yellow-text valign-wrapper">{{this}}</div>
+                {{/each}}
+            </div>
+        {{/each}}      
+    </script>
+
+    <script id="score1-template" type="text/x-handlebars-template">
+            <div class="row left">
+                    <div id="player1score" class="col s6 green darken-4 yellow-text valign-wrapper">Player 1: {{score}}</div>
+            </div>
+    </script>
+
+    <script id="score2-template" type="text/x-handlebars-template">
+        <div class="row right">
+                <div id="player2score" class="col s6 green darken-4 yellow-text valign-wrapper">Player 2: {{score}}</div>
+        </div>
+    </script>
+
+    <div class="container center-align"></div>
+
+    <div id="scores">
+        <div class="player1Score-container"></div>
+        <div class="player2Score-container"></div>
+    </div>
+
+    <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="Matrix.js"></script>
+    <script src="GoldRush.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
